@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+  padding: 16px;
+}
+header { margin-bottom: 12px; }
+h1 { color: #2563eb; }
+a { margin-right:7px; color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+footer {color:#f9e7ff}
