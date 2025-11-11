@@ -1,0 +1,113 @@
+/* Base & layout */
+* { box-sizing: border-box; }
+body {
+  background-color: #fff;
+  color: #111;
+  font: 16px/1.5 Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.centered-container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 8px 12px;
+  background: #000;
+  color: #fff;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  z-index: 1000;
+}
+
+/* Header & navigation */
+.site-header {
+  background: cadetblue;
+  color: #fff;
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav li { border-bottom: 1px solid #000; }
+.nav a {
+  display: block;
+  padding: 16px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.nav a:hover,
+.nav a:focus-visible {
+  background: #000;
+  outline: none;
+}
+
+/* Hero section */
+.hero {
+  background-image: url("Images/Backg.png"); /* ensure exact path/case */
+  background-position: center center;
+  background-size: cover;
+  padding: 200px 0;
+}
+.hero-title {
+  margin: 0;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-size: 2.25rem;
+  padding: 12px;
+}
+
+/* Intro */
+.intro p {
+  color: grey;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 32px;
+}
+.card {
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px auto;
+}
+.card p {
+  margin: 0;
+  padding: 0 8px 12px;
+}
+
+/* Wider screens */
+@media (min-width: 700px) {
+  .nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav li {
+    border-bottom: 0;
+    border-left: 1px solid #000;
+  }
+  .nav li:first-child { border-left: 0; }
+}
